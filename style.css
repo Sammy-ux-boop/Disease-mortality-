@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+#map {
+  height: 500px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select {
+  padding: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Table container styles */
+#tableContainer {
+  position: absolute;
+  top: 180px; /* adjust depending on your form height */
+  right: 30px;
+  width: 280px;
+  max-height: 400px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  z-index: 999;
+  overflow: hidden;
+}
+
+#diseaseTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#diseaseTable thead {
+  background-color: #007bff;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#diseaseTable tbody {
+  display: block;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+#diseaseTable tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#diseaseTable th,
+#diseaseTable td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+#diseaseTable tbody tr:hover {
+  background-color: #f1f1f1;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Disease Map Query</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+  <h1>Disease Data Filter</h1>
+
+  <form id="queryForm">
+    <label for="column">Select Disease/Category:</label>
+    <select id="column" required>
+      <option value="HIV">HIV</option>
+      <option value="neonatal_1">Neonatal 2014</option>
+      <option value="neonatal_22">Neonatal 2022</option>
+      <option value="infant_14">Infant 2014</option>
+      <option value="infant_22">Infant 2022</option>
+      <option value="child_14">Child 2014</option>
+      <option value="child_22">Child 2022</option>
+      <option value="under_five_14">Under 5 - 2014</option>
+      <option value="under_five_22">Under 5 - 2022</option>
+    </select>
+
+    <br><br>
+
+    <label for="minValue">Cases Greater Than: </label>
+    <input type="number" id="minValue" step="0.01" required />
+
+    <br><br>
+
+    <button type="submit">Filter Data</button>
+  </form>
+
+  <!-- Floating table container -->
+  <div id="tableContainer">
+    <table id="diseaseTable" border="1">
+      <thead>
+        <tr>
+          <th>County</th>
+          <th id="diseaseHeader">Disease</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will go here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Map container -->
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Supabase JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <!-- Main script -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
