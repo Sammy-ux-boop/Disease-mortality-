@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (value <= thresholds[0]) return colors[0];
       if (value <= thresholds[1]) return colors[1];
       if (value <= thresholds[2]) return colors[2];
-      return colors[3];
+      return colors[4];
     };
 
     function populateTable(data, disease) {
@@ -157,3 +157,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 });
+
