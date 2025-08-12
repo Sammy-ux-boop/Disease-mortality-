@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const percentiles = calculatePercentiles(data);
     const maxValue = Math.max(...data.map(row => row.disease_value || 0));
     const thresholds = [percentiles[0], percentiles[1], percentiles[2], maxValue];
-    const colors = ['green', 'yellow', 'orange', 'red'];
+    const colors = ['yellow', 'orange', 'red'];
 
     const colorScale = (value) => {
       if (value <= thresholds[0]) return colors[0];
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     legend.onAdd = function () {
       const div = L.DomUtil.create('div', 'info legend');
-      const labels = ['Low', 'Moderate', 'High', 'Very High'];
+      const labels = ['Low', 'Moderate', 'High',];
 
       // Update to show 4 ranges instead of 3
       for (let i = 0; i < thresholds.length - 1; i++) {
@@ -157,5 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 });
+
 
 
