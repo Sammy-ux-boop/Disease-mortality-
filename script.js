@@ -8,7 +8,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Initialize Supabase
+// Initialize Supabase.
 const supabase = createClient(
   'https://aqupatrmqukfszrinlbr.supabase.co',
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFxdXBhdHJtcXVrZnN6cmlubGJyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUyMTk1MTIsImV4cCI6MjA2MDc5NTUxMn0.yWNjvIoRKpD3E-X1_YlJ7HqfCgMFELIvLyAuX-O7GII'
